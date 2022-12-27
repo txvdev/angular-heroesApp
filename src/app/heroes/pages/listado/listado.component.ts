@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-listado',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ListadoComponent {
 
+  constructor( private heroService: HeroesService ) {
+
+  }
+
+  ngOnInit(): void{
+    this.heroService.getHeroes()
+      .subscribe( resp => console.log(resp))
+  }
 }
