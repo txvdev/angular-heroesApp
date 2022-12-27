@@ -1,0 +1,14 @@
+
+a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a span{
+  margin:10px;
+}
+
+.container{
+  margin: 10px;
+}
